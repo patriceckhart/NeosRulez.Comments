@@ -37,12 +37,9 @@ class CommentController extends ActionController
     public function commentsAction() {
         $documentnode = $this->request->getInternalArgument('__documentNode');
         $this->view->assign('documentnode', $documentnode);
-
-        /*$comments = '\NeosRulez\Comments\Domain\Model\Comment';
-        $query = $this->persistenceManager->createQueryForType($comments);
-        $result = $query->matching($query->equals('node', $node))->execute();
-        $this->view->assign('comments', $result);*/
-        
+        $comments = $this->commentRepository->getComments($documentnode);
+        $this->view->assign('comments', $comments);
+        $this->view->assign('gravatarImgSize', $this->settings['gravatarImgSize']);
     }
 
     /**
@@ -51,8 +48,10 @@ class CommentController extends ActionController
      */
     public function createAction(Comment $newComment) {
         $newComment->setDeleted(0);
+        $email = $newComment->getEmail();
+        $newComment->setEmailmd5(md5($email));
         $this->commentRepository->add($newComment);
-        $this->addFlashMessage('Kommentar gespeichert.');
+        //$this->addFlashMessage('Kommentar gespeichert.');
         $backlink = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $this->redirectToUri($backlink);
     }

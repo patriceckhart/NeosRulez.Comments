@@ -24,3 +24,17 @@
         </f:form>
     </div>
 </div>
+<div class="neosrulez-comments">
+    <f:if condition="{comments}">
+        <f:for each="{comments}" as="comment">
+            <div class="media">
+                <img class="align-self-start mr-3" src="http://gravatar.com/avatar/{comment.emailmd5}?s={gravatarImgSize}" alt="{comment.name}">
+                <div class="media-body">
+                    <small class="text-muted"><strong>{comment.name}</strong> schrieb am <f:format.date format='d.m.Y'>{comment.created}</f:format.date></small>
+                    <p>{comment.comment}</p>
+                </div>
+            </div>
+            <hr>
+        </f:for>
+    </f:if>
+</div>

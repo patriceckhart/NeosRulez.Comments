@@ -14,4 +14,15 @@ use Neos\Flow\Persistence\Repository;
 class CommentRepository extends Repository
 {
 
+    /**
+     * @param string $node
+     * @return void
+     */
+    public function getComments($node) {
+        $comments = '\NeosRulez\Comments\Domain\Model\Comment';
+        $query = $this->persistenceManager->createQueryForType($comments);
+        $result = $query->matching($query->equals('node', $node))->execute();
+        return $result;
+    }
+
 }

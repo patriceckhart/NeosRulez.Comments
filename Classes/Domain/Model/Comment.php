@@ -82,6 +82,28 @@ class Comment
 
     /**
      * @var string
+     */
+    protected $emailmd5;
+
+    /**
+     * @return string
+     */
+    public function getEmailmd5()
+    {
+        return $this->emailmd5;
+    }
+
+    /**
+     * @param string $emailmd5
+     * @return void
+     */
+    public function setEmailmd5($emailmd5)
+    {
+        $this->emailmd5 = $emailmd5;
+    }
+
+    /**
+     * @var string
      * @ORM\Column(type="text")
      */
     protected $comment;
