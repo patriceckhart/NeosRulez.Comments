@@ -42,6 +42,7 @@ class CommentController extends ActionController
         $query = $this->persistenceManager->createQueryForType($comments);
         $result = $query->matching($query->equals('node', $node))->execute();
         $this->view->assign('comments', $result);*/
+        
     }
 
     /**
