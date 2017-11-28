@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Comments" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+				<source>Comment plugin</source>
+			</trans-unit>
+            <trans-unit id="leavecomment" xml:space="preserve">
+				<source>Leave a new comment</source>
+			</trans-unit>
+            <trans-unit id="name" xml:space="preserve">
+				<source>Name</source>
+			</trans-unit>
+            <trans-unit id="email" xml:space="preserve">
+				<source>E-Mail Address</source>
+			</trans-unit>
+            <trans-unit id="comment" xml:space="preserve">
+				<source>Comment</source>
+			</trans-unit>
+            <trans-unit id="savecomment" xml:space="preserve">
+				<source>Save Comment</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,26 @@
+{namespace fusion=Neos\Fusion\ViewHelpers}
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+<h3>{f:translate(id: 'leavecomment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</h3>
+<div class="row">
+    <div class="col-sm-4">
+        <f:form action="create" objectName="newComment">
+        <div class="form-group">
+            <label for="name">{f:translate(id: 'name', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</label>
+            <f:form.textfield id="name" property="name" class="form-control" value="" placeholder="{f:translate(id: 'name', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}" />
+        </div>
+        <div class="form-group">
+            <label for="email">{f:translate(id: 'email', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</label>
+            <f:form.textfield id="email" property="email" class="form-control" value="" placeholder="{f:translate(id: 'email', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}" />
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="form-group">
+            <label for="comment">{f:translate(id: 'comment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</label>
+            <f:form.textarea id="comment" property="comment" class="form-control" value="" placeholder="{f:translate(id: 'comment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}" />
+        </div>
+        <button type="submit" class="btn btn-primary">{f:translate(id: 'savecomment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</button>
+        <f:form.hidden property="node" value="{documentnode}"/>
+        </f:form>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+'NeosRulez.Comments:Comments':
+  superTypes:
+    'Neos.Neos:Plugin': TRUE
+  ui:
+    label: i18n
+    group: 'comments'
+    icon: 'icon-comments'

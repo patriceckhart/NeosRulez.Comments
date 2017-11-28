@@ -1,0 +1,27 @@
+{
+    "description": "A Neos CMS comments/guestbook plugin",
+    "license": "GPL-3.0+",
+    "type": "neos-plugin",
+    "name": "neosrulez/comments",
+    "authors": [
+        {
+            "name": "Patric Eckhart",
+            "email": "mail@patriceckhart.com",
+            "homepage": "http://www.patriceckhart.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "neos/neos": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NeosRulez\\Comments\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "NeosRulez.Comments"
+        }
+    }
+}

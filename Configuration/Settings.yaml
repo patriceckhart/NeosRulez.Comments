@@ -1,0 +1,17 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          NeosRulez.Comments:
+            - Main
+            - 'NodeTypes/*'
+      defaultLanguage: 'de'
+    nodeTypes:
+      groups:
+        comments:
+          position: 'end'
+          label: NeosRulez.Comments:Main:pluginname
+    fusion:
+      autoInclude:
+        NeosRulez.Comments: true

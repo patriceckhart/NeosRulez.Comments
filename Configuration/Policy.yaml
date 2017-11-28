@@ -1,0 +1,11 @@
+privilegeTargets:
+  Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    'NeosRulez.Comments:CommentControllerActions':
+      matcher: 'method(NeosRulez\Comments\Controller\CommentController->.*Action())'
+
+roles:
+  'Neos.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'NeosRulez.Comments:CommentControllerActions'
+        permission: GRANT
