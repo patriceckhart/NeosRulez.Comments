@@ -57,7 +57,12 @@ class CommentController extends ActionController
         $newComment->setEmailmd5(md5($email));
         $this->commentRepository->add($newComment);
         $sendMails = $this->settings['sendMails'];
-        $backlink = strstr($backlink, '?', true);
+        $checkbacklink = strpos($backlink, '?');
+        if ($checkbacklink === false) {
+            $backlink = $backlink;
+        } else {
+            $backlink = strstr($backlink, '?', true);
+        }
         $identifier =  $this->persistenceManager->getIdentifierByObject($newComment);
         if($sendMails==true) {
             $adminMail = $this->settings['adminMail'];
