@@ -36,7 +36,7 @@ NeosRulez:
   Comments:
     usingGravatar: true
     gravatarImgSize: '64'
-    sendMails: true
+    sendMails: false
     adminName: 'Admin'
     adminMail: 'mail@patriceckhart.com'
     mailSubject: 'Kommentar'

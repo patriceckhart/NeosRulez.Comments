@@ -37,6 +37,7 @@ class Comment
     }
 
     /**
+     * @Flow\Validate(type="NotEmpty")
      * @var string
      */
     protected $name;
@@ -59,6 +60,8 @@ class Comment
     }
 
     /**
+     * @Flow\Validate(type="NotEmpty")
+     * @Flow\Validate(type="EmailAddress")
      * @var string
      */
     protected $email;
@@ -103,6 +106,7 @@ class Comment
     }
 
     /**
+     * @Flow\Validate(type="NotEmpty")
      * @var string
      * @ORM\Column(type="text")
      */
@@ -210,5 +214,6 @@ class Comment
     {
         $this->answercreated = $answercreated;
     }
+
 
 }
