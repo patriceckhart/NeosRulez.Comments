@@ -32,6 +32,18 @@
             <trans-unit id="saveanswer" xml:space="preserve">
 				<source>Antwort speichern</source>
 			</trans-unit>
+            <trans-unit id="write" xml:space="preserve">
+				<source>schrieb am</source>
+			</trans-unit>
+            <trans-unit id="at" xml:space="preserve">
+				<source> um </source>
+			</trans-unit>
+            <trans-unit id="oclock" xml:space="preserve">
+				<source> Uhr</source>
+			</trans-unit>
+            <trans-unit id="answered" xml:space="preserve">
+				<source>antwortete am</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

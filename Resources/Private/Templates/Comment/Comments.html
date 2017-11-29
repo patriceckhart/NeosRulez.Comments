@@ -17,7 +17,7 @@
     <div class="col-sm-8">
         <div class="form-group">
             <label for="comment">{f:translate(id: 'comment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</label>
-            <f:form.textarea id="comment" property="comment" class="form-control" value="" placeholder="{f:translate(id: 'comment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}" />
+            <f:form.textarea id="comment" property="comment" class="form-control comment-textarea" value="" placeholder="{f:translate(id: 'comment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}" />
         </div>
         <button type="submit" class="btn btn-primary">{f:translate(id: 'savecomment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</button>
         <f:form.hidden property="node" value="{documentnode}"/>
@@ -28,14 +28,25 @@
 <div class="neosrulez-comments">
     <f:if condition="{comments}">
         <f:for each="{comments}" as="comment">
+            <f:if condition="{comment.deleted}==0">
             <div class="media">
                 <img class="align-self-start mr-3" src="http://gravatar.com/avatar/{comment.emailmd5}?s={gravatarImgSize}" alt="{comment.name}">
                 <div class="media-body">
-                    <small class="text-muted"><strong>{comment.name}</strong> schrieb am <f:format.date format='d.m.Y'>{comment.created}</f:format.date></small>
+                    <small class="text-muted"><strong>{comment.name}</strong> {f:translate(id: 'write', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')} <f:format.date format='d.m.Y'>{comment.created}</f:format.date>{f:translate(id: 'at', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}<f:format.date format='H:i'>{comment.created}</f:format.date>{f:translate(id: 'oclock', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</small>
                     <p>{comment.comment}</p>
                 </div>
             </div>
+                <f:if condition="{comment.answer}">
+                    <div class="media answer-indent">
+                        <img class="align-self-start mr-3" src="http://gravatar.com/avatar/{adminMailmd5}?s={gravatarImgSize}" alt="{comment.name}">
+                        <div class="media-body">
+                            <small class="text-muted"><strong>{adminName}</strong> {f:translate(id: 'answered', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')} <f:format.date format='d.m.Y'>{comment.answercreated}</f:format.date>{f:translate(id: 'at', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}<f:format.date format='H:i'>{comment.answercreated}</f:format.date>{f:translate(id: 'oclock', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</small>
+                            <p>{comment.answer}</p>
+                        </div>
+                    </div>
+                </f:if>
             <hr>
+            </f:if>
         </f:for>
     </f:if>
 </div>

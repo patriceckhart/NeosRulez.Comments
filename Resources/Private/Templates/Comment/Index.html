@@ -16,14 +16,21 @@
                 <tr>
                     <td><p style="margin-top:10px; margin-bottom:10px;">{comment.name}</p></td>
                     <td><p style="margin-top:10px; margin-bottom:10px;">{comment.email}</p></td>
-                    <td><p style="margin-top:10px; margin-bottom:10px;"><f:format.date format='d.m.Y'>{comment.created}</f:format.date></p></td>
+                    <td><p style="margin-top:10px; margin-bottom:10px;"><f:format.date format='d.m.Y'>{comment.created}</f:format.date>, <f:format.date format='H:i'>{comment.created}</f:format.date></p></td>
                     <td><p style="margin-top:10px; margin-bottom:10px;">{comment.comment}</p></td>
                     <td><p style="margin-top:10px; margin-bottom:10px;">{comment.answer}</p></td>
                     <td class="neos-action">
                         <div class="neos-pull-right">
                             <f:form action="delete" arguments="{comment: comment}">
                                 <f:link.action class="neos-button neos-button-primary" action="answer" arguments="{comment: comment}"><i class="icon-reply icon-white"></i></f:link.action>
-                                <button type="submit" class="neos-button neos-button-danger"><i class="icon-remove"></i></button>
+                                <f:if condition="{comment.deleted}==0">
+                                    <f:then>
+                                        <button type="submit" class="neos-button neos-button-danger"><i class="icon-eye-slash"></i></button>
+                                    </f:then>
+                                    <f:else>
+                                        <f:link.action class="neos-button neos-button-success" action="activate" arguments="{comment: comment}"><i class="icon-eye icon-white"></i></f:link.action>
+                                    </f:else>
+                                </f:if>
                             </f:form>
                         </div>
                     </td>

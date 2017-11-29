@@ -1,0 +1,14 @@
+prototype(Neos.Neos:Page) {
+    NeosRulezCommentsCss = Neos.Fusion:Tag {
+        @position = 'before stylesheets'
+        tagName = 'link'
+        attributes {
+            media = 'all'
+            rel = 'stylesheet'
+            href = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Comments/Public/Styles/styles.min.css'
+            }
+        }
+    }
+    NeosRulezCommentsCss.@if.contentIsPresent = ${q(documentNode).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof NeosRulez.Comments:Comments]').is()}
+}

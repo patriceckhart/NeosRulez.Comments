@@ -188,4 +188,27 @@ class Comment
         return $this->created;
     }
 
+    /**
+     * @ORM\Column(nullable=true)
+     * @var \DateTime
+     */
+    protected $answercreated;
+
+    /**
+     * @return \DateTime
+     */
+    public function getAnswercreated()
+    {
+        return $this->answercreated;
+    }
+
+    /**
+     * @param \DateTime $answercreated
+     * @return void
+     */
+    public function setAnswercreated($answercreated)
+    {
+        $this->answercreated = $answercreated;
+    }
+
 }
