@@ -1,0 +1,38 @@
+<f:if condition="{comments}">
+    <f:then>
+        <table class="neos-table">
+            <thead>
+            <tr>
+                <td>{f:translate(id: 'name', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</td>
+                <td>{f:translate(id: 'email', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</td>
+                <td>{f:translate(id: 'created', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</td>
+                <td>{f:translate(id: 'comment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</td>
+                <td>{f:translate(id: 'answer', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</td>
+                <td>&nbsp;</td>
+            </tr>
+            </thead>
+            <tbody>
+            <f:for each="{comments}" as="comment">
+                <tr>
+                    <td><p style="margin-top:10px; margin-bottom:10px;">{comment.name}</p></td>
+                    <td><p style="margin-top:10px; margin-bottom:10px;">{comment.email}</p></td>
+                    <td><p style="margin-top:10px; margin-bottom:10px;"><f:format.date format='d.m.Y'>{comment.created}</f:format.date></p></td>
+                    <td><p style="margin-top:10px; margin-bottom:10px;">{comment.comment}</p></td>
+                    <td><p style="margin-top:10px; margin-bottom:10px;">{comment.answer}</p></td>
+                    <td class="neos-action">
+                        <div class="neos-pull-right">
+                            <f:form action="delete" arguments="{comment: comment}">
+                                <f:link.action class="neos-button neos-button-primary" action="answer" arguments="{comment: comment}"><i class="icon-reply icon-white"></i></f:link.action>
+                                <button type="submit" class="neos-button neos-button-danger"><i class="icon-remove"></i></button>
+                            </f:form>
+                        </div>
+                    </td>
+                </tr>
+            </f:for>
+            </tbody>
+        </table>
+    </f:then>
+    <f:else>
+        <br />{f:translate(id: 'nocomments', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}
+    </f:else>
+</f:if>

@@ -17,8 +17,20 @@
             <trans-unit id="comment" xml:space="preserve">
 				<source>Kommentar</source>
 			</trans-unit>
+            <trans-unit id="created" xml:space="preserve">
+				<source>Datum</source>
+			</trans-unit>
             <trans-unit id="savecomment" xml:space="preserve">
 				<source>Kommentar speichern</source>
+			</trans-unit>
+            <trans-unit id="nocomments" xml:space="preserve">
+				<source>Keine Kommentare verfügbar.</source>
+			</trans-unit>
+            <trans-unit id="answer" xml:space="preserve">
+				<source>Antwort</source>
+			</trans-unit>
+            <trans-unit id="saveanswer" xml:space="preserve">
+				<source>Antwort speichern</source>
 			</trans-unit>
         </body>
     </file>

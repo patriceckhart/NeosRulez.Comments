@@ -126,6 +126,30 @@ class Comment
     }
 
     /**
+     * @var string
+     * @ORM\Column(nullable=true)
+     * @ORM\Column(type="text")
+     */
+    protected $answer;
+
+    /**
+     * @return string
+     */
+    public function getAnswer()
+    {
+        return $this->answer;
+    }
+
+    /**
+     * @param string $answer
+     * @return void
+     */
+    public function setAnswer($answer)
+    {
+        $this->answer = $answer;
+    }
+
+    /**
      * @var integer
      */
     protected $deleted;

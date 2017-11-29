@@ -15,6 +15,25 @@ Neos:
     fusion:
       autoInclude:
         NeosRulez.Comments: true
+    modules:
+      neosrulezcomments:
+        label: NeosRulez.Comments:Main:pluginname
+        controller: '\Neos\Neos\Controller\Module\ManagementController'
+        description: NeosRulez.Comments:Main:pluginname
+        icon: 'icon-comments'
+        resource: 'Neos_Neos_Backend_Module_Management'
+        submodules:
+          comments:
+            label: NeosRulez.Comments:Main:allcomments
+            controller: '\NeosRulez\Comments\Controller\CommentController'
+            description: NeosRulez.Comments:Main:allcommentsdescription
+            icon: 'icon-comment-o'
+            actions:
+              index:
+                label: NeosRulez.Comments:Main:allcomments
+                title: NeosRulez.Comments:Main:allcomments
 NeosRulez:
   Comments:
     gravatarImgSize: '64'
+    sendMails: true
+    adminMail: 'mail@patriceckhart.com'

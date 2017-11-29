@@ -3,7 +3,13 @@
 	<file original="" product-name="NeosRulez.Comments" source-language="de" datatype="plaintext">
 		<body>
 			<trans-unit id="pluginname" xml:space="preserve">
-				<source>Plugin für Kommentare</source>
+				<source>Kommentare</source>
+			</trans-unit>
+			<trans-unit id="allcomments" xml:space="preserve">
+				<source>Kommentare verwalten</source>
+			</trans-unit>
+			<trans-unit id="allcommentsdescription" xml:space="preserve">
+				<source>Mit diesem Modul, können Sie Kommentare verwalten.</source>
 			</trans-unit>
 		</body>
 	</file>

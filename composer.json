@@ -12,7 +12,8 @@
         }
     ],
     "require": {
-        "neos/neos": "*"
+        "neos/neos": "*",
+        "neos/swiftmailer": "*"
     },
     "autoload": {
         "psr-4": {
