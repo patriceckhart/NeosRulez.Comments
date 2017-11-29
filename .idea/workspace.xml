@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84c31c45-627c-4383-8666-95dc2fed03f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Controller/CommentController.php" afterPath="$PROJECT_DIR$/Classes/Controller/CommentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Domain/Model/Comment.php" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Domain/Repository/CommentRepository.php" afterPath="$PROJECT_DIR$/Classes/Domain/Repository/CommentRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/Settings.yaml" afterPath="$PROJECT_DIR$/Configuration/Settings.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Comment/Comments.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Comment/Comments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Comment/Index.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Comment/Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Comments.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Comments.xlf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Comments.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Comments.xlf" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,53 +16,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CommentRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/CommentRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-              <folding>
-                <element signature="e#119#153#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.min.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/styles.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Settings.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommentController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CommentController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Classes/Controller/CommentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="41" />
+            <state relative-caret-position="479">
+              <caret line="68" column="58" lean-forward="true" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Comments.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Comment/Comments.html">
+      <file leaf-file-name="Comment.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Comment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="81" lean-forward="true" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="97" />
+            <state relative-caret-position="277">
+              <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/styles.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -111,14 +81,14 @@
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Comment/Index.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Comments.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Comments.xlf" />
-        <option value="$PROJECT_DIR$/Classes/Domain/Model/Comment.php" />
-        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
-        <option value="$PROJECT_DIR$/Classes/Controller/CommentController.php" />
         <option value="$PROJECT_DIR$/Classes/Domain/Repository/CommentRepository.php" />
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/Comment/Comments.html" />
         <option value="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/Comment/Comments.html" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Model/Comment.php" />
+        <option value="$PROJECT_DIR$/Classes/Controller/CommentController.php" />
+        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
       </list>
     </option>
   </component>
@@ -325,12 +295,12 @@
       <workItem from="1511889647967" duration="398000" />
       <workItem from="1511890060957" duration="1161000" />
       <workItem from="1511891240041" duration="4945000" />
-      <workItem from="1511937665266" duration="6554000" />
+      <workItem from="1511937665266" duration="10277000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13058000" />
+    <option name="totallyTimeSpent" value="16781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1343" extended-state="6" />
@@ -409,12 +379,12 @@
         <state relative-caret-position="540">
           <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding>
-            <element signature="e#704#710#1" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#td#0;n#tr#0;n#f:for#0;n#tbody#0;n#table#0;n#f:then#0;n#f:if#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#td#1;n#tr#0;n#f:for#0;n#tbody#0;n#table#0;n#f:then#0;n#f:if#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#td#2;n#tr#0;n#f:for#0;n#tbody#0;n#table#0;n#f:then#0;n#f:if#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#td#3;n#tr#0;n#f:for#0;n#tbody#0;n#table#0;n#f:then#0;n#f:if#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#td#4;n#tr#0;n#f:for#0;n#tbody#0;n#table#0;n#f:then#0;n#f:if#0;n#!!top" expanded="true" />
+            <element signature="e#704#710#1" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#td#0;n#tr#0;n#f:for#0;n#tbody#0;n#table#0;n#f:then#0;n#f:if#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#td#1;n#tr#0;n#f:for#0;n#tbody#0;n#table#0;n#f:then#0;n#f:if#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#td#2;n#tr#0;n#f:for#0;n#tbody#0;n#table#0;n#f:then#0;n#f:if#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#td#3;n#tr#0;n#f:for#0;n#tbody#0;n#table#0;n#f:then#0;n#f:if#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#td#4;n#tr#0;n#f:for#0;n#tbody#0;n#table#0;n#f:then#0;n#f:if#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -432,7 +402,7 @@
         <state relative-caret-position="150">
           <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding>
-            <element signature="n#style#0;n#f:form.textarea#0;n#div#0;n#div#0;n#f:form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#f:form.textarea#0;n#div#0;n#div#0;n#f:form#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -477,34 +447,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="167" column="7" lean-forward="true" selection-start-line="167" selection-start-column="7" selection-end-line="167" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Controller/CommentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/CommentRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="210">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
             <element signature="e#119#153#0#PHP" expanded="true" />
           </folding>
@@ -513,16 +459,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Comment/Comments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="81" lean-forward="true" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="97" />
+        <state relative-caret-position="780">
+          <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/styles.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="90">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Controller/CommentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="68" column="58" lean-forward="true" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
           <folding />
         </state>
       </provider>

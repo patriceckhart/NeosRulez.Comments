@@ -1,22 +1,23 @@
 {namespace fusion=Neos\Fusion\ViewHelpers}
 {namespace neos=Neos\Neos\ViewHelpers}
 {namespace media=Neos\Media\ViewHelpers}
+<f:flashMessages class="ulalert alert" />
 <h3>{f:translate(id: 'leavecomment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</h3>
 <div class="row">
     <div class="col-sm-4">
         <f:form action="create" objectName="newComment">
         <div class="form-group">
-            <label for="name">{f:translate(id: 'name', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</label>
+            <label for="name">{f:translate(id: 'name', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}<span class="required">*</span></label>
             <f:form.textfield id="name" property="name" class="form-control" value="" placeholder="{f:translate(id: 'name', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}" />
         </div>
         <div class="form-group">
-            <label for="email">{f:translate(id: 'email', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</label>
+            <label for="email">{f:translate(id: 'email', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}<span class="required">*</span></label>
             <f:form.textfield id="email" property="email" class="form-control" value="" placeholder="{f:translate(id: 'email', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}" />
         </div>
     </div>
     <div class="col-sm-8">
         <div class="form-group">
-            <label for="comment">{f:translate(id: 'comment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</label>
+            <label for="comment">{f:translate(id: 'comment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}<span class="required">*</span></label>
             <f:form.textarea id="comment" property="comment" class="form-control comment-textarea" value="" placeholder="{f:translate(id: 'comment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}" />
         </div>
         <button type="submit" class="btn btn-primary">{f:translate(id: 'savecomment', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</button>
@@ -30,18 +31,18 @@
         <f:for each="{comments}" as="comment">
             <f:if condition="{comment.deleted}==0">
             <div class="media">
-                <img class="align-self-start mr-3" src="http://gravatar.com/avatar/{comment.emailmd5}?s={gravatarImgSize}" alt="{comment.name}">
+                <f:if condition="{usingGravatar}=1"><img class="align-self-start mr-3" src="http://gravatar.com/avatar/{comment.emailmd5}?s={gravatarImgSize}" alt="{comment.name}"></f:if>
                 <div class="media-body">
                     <small class="text-muted"><strong>{comment.name}</strong> {f:translate(id: 'write', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')} <f:format.date format='d.m.Y'>{comment.created}</f:format.date>{f:translate(id: 'at', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}<f:format.date format='H:i'>{comment.created}</f:format.date>{f:translate(id: 'oclock', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</small>
-                    <p>{comment.comment}</p>
+                    <p><f:format.nl2br>{comment.comment}</f:format.nl2br></p>
                 </div>
             </div>
                 <f:if condition="{comment.answer}">
                     <div class="media answer-indent">
-                        <img class="align-self-start mr-3" src="http://gravatar.com/avatar/{adminMailmd5}?s={gravatarImgSize}" alt="{comment.name}">
+                        <f:if condition="{usingGravatar}=1"><img class="align-self-start mr-3" src="http://gravatar.com/avatar/{adminMailmd5}?s={gravatarImgSize}" alt="{comment.name}"></f:if>
                         <div class="media-body">
                             <small class="text-muted"><strong>{adminName}</strong> {f:translate(id: 'answered', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')} <f:format.date format='d.m.Y'>{comment.answercreated}</f:format.date>{f:translate(id: 'at', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}<f:format.date format='H:i'>{comment.answercreated}</f:format.date>{f:translate(id: 'oclock', package: 'NeosRulez.Comments', source: 'NodeTypes/Comments')}</small>
-                            <p>{comment.answer}</p>
+                            <p><f:format.nl2br>{comment.answer}</f:format.nl2br></p>
                         </div>
                     </div>
                 </f:if>

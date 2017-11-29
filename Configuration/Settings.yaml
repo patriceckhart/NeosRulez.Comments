@@ -34,6 +34,7 @@ Neos:
                 title: NeosRulez.Comments:Main:allcomments
 NeosRulez:
   Comments:
+    usingGravatar: true
     gravatarImgSize: '64'
     sendMails: true
     adminName: 'Admin'

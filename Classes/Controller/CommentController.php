@@ -43,6 +43,7 @@ class CommentController extends ActionController
         $this->view->assign('url', (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
         $this->view->assign('adminName', $this->settings['adminName']);
         $this->view->assign('adminMailmd5', md5($this->settings['adminMail']));
+        $this->view->assign('usingGravatar', $this->settings['usingGravatar']);
     }
 
     /**
@@ -53,23 +54,33 @@ class CommentController extends ActionController
     public function createAction(Comment $newComment, $backlink) {
         $newComment->setDeleted(0);
         $email = $newComment->getEmail();
-        $newComment->setEmailmd5(md5($email));
-        $this->commentRepository->add($newComment);
-        $sendMails = $this->settings['sendMails'];
-        if($sendMails==true) {
-            $adminMail = $this->settings['adminMail'];
-            $mailSubject = $this->settings['mailSubject'];
-            $name = $newComment->getName();
-            $email = $newComment->getEmail();
-            $comment = $newComment->getComment();
-            $date = date('d.m.Y, H:i', time());
-            $mailbody = '<p><strong>'.$name.', '.$date.':</strong></p><p>'.$comment.'</p>'.'<p>'.$backlink.'</p>';
-            $confirmation = new \Neos\SwiftMailer\Message();
-            $confirmation->setFrom(array($email))
-                ->setTo(array($adminMail))
-                ->setSubject($mailSubject)
-                ->setBody($mailbody, 'text/html')
-                ->send();
+        $name = $newComment->getName();
+        $comment = $newComment->getComment();
+
+        if($email==NULL || $name==NULL || $comment==NULL) {
+            $this->addFlashMessage('Sie müssen alle Pflichtfelder ausfüllen.', 'Fehler!', \Neos\Error\Messages\Message::SEVERITY_ERROR);
+        } else if (!preg_match("/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/", $email)) {
+            $this->addFlashMessage('Die von Ihnen eingegebene E-Mail-Adresse ist nicht korrekt.', 'Fehler!', \Neos\Error\Messages\Message::SEVERITY_ERROR);
+        } else {
+            $newComment->setEmailmd5(md5($email));
+            $this->commentRepository->add($newComment);
+            $sendMails = $this->settings['sendMails'];
+            if($sendMails==true) {
+                $adminMail = $this->settings['adminMail'];
+                $mailSubject = $this->settings['mailSubject'];
+                $name = $newComment->getName();
+                $email = $newComment->getEmail();
+                $comment = $newComment->getComment();
+                $date = date('d.m.Y, H:i', time());
+                $mailbody = '<p><strong>'.$name.', '.$date.':</strong></p><p>'.$comment.'</p>'.'<p>'.$backlink.'</p>';
+                $confirmation = new \Neos\SwiftMailer\Message();
+                $confirmation->setFrom(array($email))
+                    ->setTo(array($adminMail))
+                    ->setSubject($mailSubject)
+                    ->setBody($mailbody, 'text/html')
+                    ->send();
+            }
+            $this->addFlashMessage('Ihr Kommentar wurde gespeichert.');
         }
         $this->redirectToUri($backlink);
     }
