@@ -11,6 +11,9 @@
 			<trans-unit id="allcommentsdescription" xml:space="preserve">
 				<source>Mit diesem Modul, können Sie Kommentare verwalten.</source>
 			</trans-unit>
+			<trans-unit id="commentssettings" xml:space="preserve">
+				<source>Einstellungen</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

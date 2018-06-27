@@ -11,6 +11,9 @@
 			<trans-unit id="allcommentsdescription" xml:space="preserve">
 				<source>With this module, you can manage comments.</source>
 			</trans-unit>
+			<trans-unit id="commentssettings" xml:space="preserve">
+				<source>Settings</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

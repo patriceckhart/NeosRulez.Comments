@@ -35,9 +35,10 @@ class CommentController extends ActionController
      * @return void
      */
     public function commentsAction() {
+        $sorting = $this->request->getInternalArgument('__sorting');
         $documentnode = $this->request->getInternalArgument('__documentNode');
         $this->view->assign('documentnode', $documentnode);
-        $comments = $this->commentRepository->getComments($documentnode);
+        $comments = $this->commentRepository->getComments($documentnode,$sorting);
         $this->view->assign('comments', $comments);
         $this->view->assign('gravatarImgSize', $this->settings['gravatarImgSize']);
         $this->view->assign('url', (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
@@ -118,6 +119,16 @@ class CommentController extends ActionController
     {
         $comment->setDeleted("1");
         $this->commentRepository->update($comment);
+        $this->redirect('index');
+    }
+
+    /**
+     * @param \NeosRulez\Comments\Domain\Model\Comment $comment
+     * @return void
+     */
+    public function killAction(Comment $comment)
+    {
+        $this->commentRepository->remove($comment);
         $this->redirect('index');
     }
 

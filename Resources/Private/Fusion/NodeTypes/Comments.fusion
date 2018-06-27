@@ -3,4 +3,12 @@ prototype(Site:Comments) {
     package = 'NeosRulez.Comments'
     controller = 'Comment'
     action = 'comments'
+    sorting = ${q(node).property('sorting')}
+    @cache {
+        mode = 'uncached'
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+    }
 }

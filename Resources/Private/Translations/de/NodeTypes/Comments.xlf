@@ -44,6 +44,18 @@
             <trans-unit id="answered" xml:space="preserve">
 				<source>antwortete am</source>
 			</trans-unit>
+			<trans-unit id="properties.sorting" xml:space="preserve">
+				<source>Sortierung</source>
+			</trans-unit>
+			<trans-unit id="properties.sorting.selectBoxEditor.values.asc" xml:space="preserve">
+				<source>Aufsteigend</source>
+			</trans-unit>
+			<trans-unit id="properties.sorting.selectBoxEditor.values.desc" xml:space="preserve">
+				<source>Absteigend</source>
+			</trans-unit>
+			<trans-unit id="privacy" xml:space="preserve">
+				<source>Mit der Nutzung dieses Formulars erklären Sie sich mit der Speicherung und Verarbeitung Ihren Daten einverstanden.</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

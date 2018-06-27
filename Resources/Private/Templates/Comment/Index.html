@@ -21,7 +21,7 @@
                     <td><p style="margin-top:10px; margin-bottom:10px;">{comment.answer}</p></td>
                     <td class="neos-action">
                         <div class="neos-pull-right">
-                            <f:form action="delete" arguments="{comment: comment}">
+                            <f:form action="delete" arguments="{comment: comment}" style="display:inline-block; float:none;">
                                 <f:link.action class="neos-button neos-button-primary" action="answer" arguments="{comment: comment}"><i class="icon-reply icon-white"></i></f:link.action>
                                 <f:if condition="{comment.deleted}==0">
                                     <f:then>
@@ -31,6 +31,9 @@
                                         <f:link.action class="neos-button neos-button-success" action="activate" arguments="{comment: comment}"><i class="icon-eye icon-white"></i></f:link.action>
                                     </f:else>
                                 </f:if>
+                            </f:form>
+                            <f:form action="kill" arguments="{comment: comment}" style="display:inline-block; float:none;">
+                                <button type="submit" class="neos-button neos-button-danger"><i class="icon-trash"></i></button>
                             </f:form>
                         </div>
                     </td>
