@@ -1,5 +1,5 @@
-prototype(Site:Comments) < prototype(Neos.Neos:Plugin)
-prototype(Site:Comments) {
+prototype(Comments:Comments) < prototype(Neos.Neos:Plugin)
+prototype(Comments:Comments) {
     package = 'NeosRulez.Comments'
     controller = 'Comment'
     action = 'comments'
