@@ -1,3 +1,2 @@
-namespace: Comments=NeosRulez.Comments
 include: NodeTypes/*
 include: ProtoTypes/*
